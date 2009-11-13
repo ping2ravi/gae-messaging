@@ -14,7 +14,11 @@
     <servlet-name>MessageReciveServlet</servlet-name>
     <servlet-class>com.next.messenger.server.GreetingServiceImpl</servlet-class>
   </servlet>
-  
+  <servlet>
+    <servlet-name>DBServlet</servlet-name>
+    <servlet-class>com.next.messenger.server.controller.DBController</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>greetServlet</servlet-name>
     <url-pattern>/gaemessagingserver/greet</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-name>MessageReciveServlet</servlet-name>
     <url-pattern>/_ah/xmpp/message/chat/</url-pattern>
   </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DBServlet</servlet-name>
+        <url-pattern>/gaemessagingserver/dataviewer</url-pattern>
+    </servlet-mapping>
   
   <!-- Default page to serve -->
   <welcome-file-list>
