@@ -1,4 +1,4 @@
-package com.next.messenger.server;
+package com.next.messenger.server.controller;
 
 import java.io.IOException;
 
