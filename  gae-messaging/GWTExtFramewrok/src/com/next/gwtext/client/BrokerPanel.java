@@ -56,7 +56,6 @@ public class BrokerPanel extends CommonPanel{
 	}
 	public boolean validateObject(Object obj,TableResultPopupWindow panel)
 	{
-		
 		return true;
 	}	
 	
