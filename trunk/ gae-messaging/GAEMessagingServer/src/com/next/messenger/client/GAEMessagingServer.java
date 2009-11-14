@@ -1,24 +1,7 @@
 package com.next.messenger.client;
 
-import com.extjs.gxt.desktop.client.Desktop;
-import com.extjs.gxt.desktop.client.Shortcut;
-import com.extjs.gxt.ui.client.widget.ContentPanel;
-import com.extjs.gxt.ui.client.widget.button.ToolButton;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.event.dom.client.KeyCodes;
-import com.google.gwt.event.dom.client.KeyUpEvent;
-import com.google.gwt.event.dom.client.KeyUpHandler;
-import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.DialogBox;
-import com.google.gwt.user.client.ui.HTML;
-import com.google.gwt.user.client.ui.Label;
-import com.google.gwt.user.client.ui.RootPanel;
-import com.google.gwt.user.client.ui.TextBox;
-import com.google.gwt.user.client.ui.VerticalPanel;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
@@ -42,13 +25,13 @@ public class GAEMessagingServer implements EntryPoint {
 	 * This is the entry point method.
 	 */
 	public void onModuleLoad() {
-		
+		/*
 		Desktop desktop = new Desktop();
 		Shortcut sc = new Shortcut();
 		sc.setText("First");
 		sc.setTitle("FirstTitle");
 		desktop.addShortcut(sc);
-		
+		*/
 	/*	
 		ContentPanel cp = new ContentPanel();
 		 cp.setHeading("Folder Contents");
