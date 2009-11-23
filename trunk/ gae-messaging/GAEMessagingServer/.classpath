@@ -8,5 +8,26 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/GaeCore.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/NextDataViewer.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/GWTCommon.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/MessagingServer.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-betwixt-0.8.jar" sourcepath="C:/work/library/common_lib/commons-betwixt-0.8/commons-betwixt-0.8-src/src">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/work/library/common_lib/commons-betwixt-0.8/docs/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-digester-2.0.jar" sourcepath="C:/work/library/common_lib/commons-digester-2.0/commons-digester-2.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/work/library/common_lib/commons-digester-2.0/commons-digester-2.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-logging-1.1.1.jar" sourcepath="C:/work/library/common_lib/commons-logging-1.1.1/commons-logging-1.1.1-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/work/library/common_lib/commons-logging-1.1.1/commons-logging-1.1.1-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-beanutils-1.8.2.jar" sourcepath="C:/work/library/common_lib/commons-beanutils-1.8.2/commons-beanutils-1.8.2-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/work/library/common_lib/commons-beanutils-1.8.2/commons-beanutils-1.8.2-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

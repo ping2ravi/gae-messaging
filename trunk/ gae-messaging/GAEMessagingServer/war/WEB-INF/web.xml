@@ -12,7 +12,7 @@
   </servlet>
   <servlet>
     <servlet-name>MessageReciveServlet</servlet-name>
-    <servlet-class>com.next.messenger.server.GreetingServiceImpl</servlet-class>
+    <servlet-class>com.next.messenger.server.controller.MessageReceiveController</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>DBServlet</servlet-name>
