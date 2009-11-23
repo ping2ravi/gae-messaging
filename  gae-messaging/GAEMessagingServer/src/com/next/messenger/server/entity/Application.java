@@ -10,14 +10,17 @@ import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
 import com.google.appengine.api.datastore.Key;
+import com.next.message.entity.ApplicationInt;
 
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
-public class Application {
+public class Application implements ApplicationInt{
 	@PrimaryKey
     @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
     private Key key;
     @Persistent
     private String applicatioName;
+    @Persistent
+    private String jid;
     @Persistent
     private String description;
     @Persistent
@@ -102,6 +105,12 @@ public class Application {
 	}
 	public Date getCreationDate() {
 		return creationDate;
+	}
+	public void setJid(String jid) {
+		this.jid = jid;
+	}
+	public String getJid() {
+		return jid;
 	}
     
 }
