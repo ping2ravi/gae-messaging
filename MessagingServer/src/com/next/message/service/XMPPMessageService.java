@@ -15,5 +15,6 @@ public interface XMPPMessageService {
 	public PublishMessageInt messagePublished(PublishMessageInt publishMessageInt) throws MessageException;
 	public MasterMessageInt saveMasterXmppMessage(ApplicationMessage messageObject,String messageText) throws MessageException;
 	public List<ApplicationInt> getAllListningApplications(String messageType) throws MessageException;
+	public void ping(ApplicationMessage message);
 	
 }
