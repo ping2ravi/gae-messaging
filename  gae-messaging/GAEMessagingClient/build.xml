@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="MessagingServer" default="build" basedir=".">
+
+  <path id="project.class.path">
+    <!-- Add any additional non-server libs (such as JUnit) -->
+    <fileset dir="war/WEB-INF/lib" includes="**/*.jar"/>
+    <fileset dir="C:\work\tools\eclipse\plugins\com.google.gwt.eclipse.sdkbundle.win32_1.7.1.v200909230239\gwt-windows-1.7.1" includes="**/*.jar"/>
+  	
+  </path>
+	<path id="module.enhancer.classpath">
+	    <pathelement location="classes"/>
+	    <path refid="project.class.path"/>
+	</path>
+
+  <target name="libs" description="Copy libs to WEB-INF/lib">
+    <!--
+  	<mkdir dir="war/WEB-INF/lib" />
+    <copy todir="war/WEB-INF/lib" file="${gwt.sdk}/gwt-servlet.jar" />
+    -->
+    <!-- Add any additional server libs that need to be copied -->
+  </target>
+
+  <target name="javac" depends="libs" description="Compile java source">
+    <mkdir dir="classes"/>
+    <javac srcdir="src" includes="**" encoding="utf-8"
+        destdir="classes"
+        source="1.5" target="1.5" nowarn="true"
+        debug="true" debuglevel="lines,vars,source">
+      <classpath refid="project.class.path"/>
+    </javac>
+  	<!--
+  	<copy todir="classes">
+      <fileset dir="src" excludes="**/*.java"/>
+    </copy>
+    -->
+  </target>
+
+
+  <target name="build" depends="javac" description="Build this project" />
+
+  
+  <target name="deploy-to-RealTaalGAE" depends="jar" description="Create a jar file">
+    <echo message="deleting old file"/>
+    <delete file="../RealTaalGAE/war/WEB-INF/lib/GAEMessagingClient.jar" failonerror="false" />
+    <echo message="copying new ile"/>
+    <copy todir="../RealTaalGAE/war/WEB-INF/lib/">
+      <fileset file="GAEMessagingClient.jar"/>
+    </copy>
+    <delete file="GAEMessagingClient.jar" failonerror="false" />
+  </target>
+	 
+
+	<target name="jar" depends="javac" description="Create a jar file">
+	    <delete file="GAEMessagingClient.jar" failonerror="false" />
+	    <jar destfile="GAEMessagingClient.jar" basedir="classes" />
+	    <delete dir="classes" failonerror="false" />
+  </target>
+
+  <target name="clean" description="Cleans this project">
+    <delete dir="classes" failonerror="false" />
+    <delete file="RealEstateBase.jar" failonerror="false" />
+  </target>
+	<target name="enhance">
+
+	        <echo message="==================================================================="/>
+	        <echo message="Enhancing the MODULE files"/>
+	        <echo message="==================================================================="/>
+
+	        <!-- the classpath to enhance -->
+	        <path id="module.enhancer.classpath">
+	            <pathelement location="classes"/>
+	            <path refid="project.class.path"/>
+	        </path>
+
+	        <!-- define the task enhancer -->
+	        <taskdef name="nucleusenhancer"
+	                 classpathref="module.enhancer.classpath"
+	                 classname="org.datanucleus.enhancer.tools.EnhancerTask" />
+
+	        <!-- enhance -->
+	        <nucleusenhancer classpathref="module.enhancer.classpath"/>
+
+	    </target>
+
+</project>
