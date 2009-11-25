@@ -68,7 +68,7 @@ public class GaeXmlService implements XmlService {
 
 	@Override
 	public Object convertXmlToObject(String applicationMessage,Class objectClass,String topLevelTag) throws MessageException{
-		ApplicationMessage returnObject = null;
+		Object returnObject = null;
 		// First construct the xml which will be read in
         // For this example, read in from a hard coded string
 		try{
@@ -89,7 +89,7 @@ public class GaeXmlService implements XmlService {
         beanReader.registerBeanClass(topLevelTag, objectClass);
         
         // Now we parse the xml
-        returnObject = (ApplicationMessage) beanReader.parse(xmlReader);
+        returnObject =  beanReader.parse(xmlReader);
         
 		} catch (IOException e) {
 			e.printStackTrace();
