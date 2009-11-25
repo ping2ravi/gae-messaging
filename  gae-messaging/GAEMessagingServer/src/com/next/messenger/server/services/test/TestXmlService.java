@@ -28,5 +28,6 @@ public class TestXmlService {
 		ApplicationMessage tc1 = (ApplicationMessage)xmlService.convertXmlToObject(fullMessage, ApplicationMessageAbstract.class);
 		System.out.println(tc1.getMessageType());
 		System.out.println(tc1.getVersion());
+		System.out.println(((TestClass)tc1).getAge());
 	}
 }
