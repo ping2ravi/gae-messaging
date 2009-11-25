@@ -97,7 +97,7 @@ public class GAEDefaultMessageController extends HttpServlet implements MessageC
 				Class cls = Class.forName(messageHandlerClass);
 				MessageHandler messageHandler = (MessageHandler)cls.newInstance();
 		 	    logger.info("Handling Message" );
-				messageHandler.handleMessage(messageObject);
+				messageHandler.handleMessage(messageObject,messageText);
 				}catch(Exception ex)
 				{
 					logger.log(Level.SEVERE, "Error while processing message of type" + messageType,ex);
